@@ -9,7 +9,7 @@ Reacher game description
 the state space is a vector of 33 dimensions that describe the environment where the agent is. The action space consist of a 3 dimensional vector with continuous values between -1 and 1. the reward is +0.1 for every time step the arm is at the right place
 
 
-Description of files used
+##Description of files used
 the 4 files below are used to build & train the models and have dependencies from Pytorch, Numpy, namedTuples,UnityEnvironment,Gym and Collections.
 
 checkpoint_actor.pth.pth : A trained actor for the DDPG model 
