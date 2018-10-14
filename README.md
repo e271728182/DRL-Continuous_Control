@@ -15,6 +15,7 @@ the 5 files below are used to build & train the models and have dependencies fro
 checkpoint_actor.pth.pth : A trained actor for the DDPG model 
 checkpoint_critic.pth: A trained critic actor for the DDPG model
 Model.py :An actor-critic model build on a  Deep neural network architecture
+ModelV02.py:An actor-critic model build on a  Deep neural network architecture with a tentative batch normalization (currently not working)
 ddpg_agent.py: An agent class that implements the DDPG algorithm. Agent class inherits the Qnetwork class in Model.py
 
 the forward method overrides the nn.module forward method as prescribed in the documentation
