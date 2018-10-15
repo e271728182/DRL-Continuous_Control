@@ -30,3 +30,7 @@ Everything is self contained in the Continus_Control.ipynb notebook. Simply run 
 
 How to set up the dependencies
 Detailed instructions are available on Alexis Cook's DRL repository https://github.com/udacity/deep-reinforcement-learning/blob/master/README.md
+
+### additional document to help me navigate the algorithm and its pitfalls
+I added a document called 'Udacity assigmment 2 DRL' it contains screenshot on my first attempt using parameters suggested in the review with corresponding (dismal) result. Also attempt2 describes my implementation of batch normalization and the corresponding error mistake I get and don't understand why
+
