@@ -12,11 +12,11 @@ the state space is a vector of 33 dimensions that describe the environment where
 ### Description of files used
 the 5 files below are used to build & train the models and have dependencies from Pytorch, Numpy, namedTuples,UnityEnvironment,Gym and Collections.
 
-checkpoint_actor.pth.pth : A trained actor for the DDPG model 
-checkpoint_critic.pth: A trained critic actor for the DDPG model
-Model.py :An actor-critic model build on a  Deep neural network architecture (original from DRL repository)
+checkpoint_actor(1).pth : A trained actor for the DDPG model 
+checkpoint_critic(1).pth: A trained critic actor for the DDPG model
 ModelV02.py:An actor-critic model build on a  Deep neural network architecture with a tentative batch normalization and modified NN parameters.
 ddpg_agent2.py: An agent class that implements the DDPG algorithm. Agent class inherits the Qnetwork class in Model.py. this has been modified from the orifinal ddpg_agent.py from the DRL repository
+DDPG Model Implementation.pdf: Report describing model implementation, results and potential improvements
 
 the forward method overrides the nn.module forward method as prescribed in the documentation
 the forward method does not need to be called explicitly
