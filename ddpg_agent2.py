@@ -13,8 +13,8 @@ BUFFER_SIZE = int(1e6)  # replay buffer size
 BATCH_SIZE = 512      # minibatch size
 GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
-LR_ACTOR = 1e-3         # learning rate of the actor 
-LR_CRITIC = 1e-3        # learning rate of the critic
+LR_ACTOR = 1e-4         # learning rate of the actor 
+LR_CRITIC = 1e-4        # learning rate of the critic
 WEIGHT_DECAY = 0        # L2 weight decay
 UPDATE_EVERY = 20       # how often to update the network
 
@@ -142,7 +142,7 @@ class Agentv02():
 class OUNoise:
     """Ornstein-Uhlenbeck process."""
 
-    def __init__(self, size, seed, mu=0., theta=0.15, sigma=0.2):
+    def __init__(self, size, seed, mu=0., theta=0.05, sigma=0.2):
         """Initialize parameters and noise process."""
         self.mu = mu * np.ones(size)
         self.theta = theta
@@ -157,7 +157,8 @@ class OUNoise:
     def sample(self):
         """Update internal state and return it as a noise sample."""
         x = self.state
-        dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))])
+        #dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))])
+        dx =   self.theta * (self.mu - x)+self.sigma*np.random.uniform(-1, 1, len(x))
         self.state = x + dx
         return self.state
 
