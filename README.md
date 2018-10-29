@@ -12,8 +12,8 @@ the state space is a vector of 33 dimensions that describe the environment where
 ### Description of files used
 the 5 files below are used to build & train the models and have dependencies from Pytorch, Numpy, namedTuples,UnityEnvironment,Gym and Collections.
 
-checkpoint_actor(1).pth : A trained actor for the DDPG model 
-checkpoint_critic(1).pth: A trained critic actor for the DDPG model
+checkpoint_actor-V04.pth : A trained actor for the DDPG model 
+checkpoint_critic-V04.pth: A trained critic actor for the DDPG model
 ModelV02.py:An actor-critic model build on a  Deep neural network architecture with a tentative batch normalization and modified NN parameters.
 ddpg_agent2.py: An agent class that implements the DDPG algorithm. Agent class inherits the Qnetwork class in Model.py. this has been modified from the orifinal ddpg_agent.py from the DRL repository
 DDPG Model Implementation.pdf: Report describing model implementation, results and potential improvements
@@ -22,7 +22,7 @@ the forward method overrides the nn.module forward method as prescribed in the d
 the forward method does not need to be called explicitly
 
 Continus_Control.ipynb: A jupyter notebook that connects to Unity environment to run the UnityEnvironment(file_name='/data/Reacher_One_Linux_NoVis/Reacher_One_Linux_NoVis.x86_64'). the notebook contains the function ddpg which is used to train a ddpg network architecture using the state,actions,reward as inputs.
-
+Continus_Control.ipynb Final: Final version of the training model 
 DDGP report: to be completed
 
 #### How to run the model
